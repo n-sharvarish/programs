@@ -3,12 +3,28 @@ package com.test;
 import com.example.Singleton;
 import com.example.SingletonEnum;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.io.*;
 import java.lang.reflect.Constructor;
 
 public class SingletonTest {
+
+    @BeforeClass
+    public void setUp() {
+
+        System.out.println("--------------------------------------------------------------");
+        System.out.println("Starting Test " + this.getClass().getName());
+    }
+
+    @AfterClass
+    public void tearDown() {
+
+        System.out.println("Completed Test " + this.getClass().getName());
+        System.out.println("--------------------------------------------------------------");
+    }
 
     @Test
     public void testSingleton() {

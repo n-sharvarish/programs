@@ -1,9 +1,25 @@
 package com.test;
 
 import com.example.Stack;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class StackTest {
+
+    @BeforeClass
+    public void setUp() {
+
+        System.out.println("--------------------------------------------------------------");
+        System.out.println("Starting Test " + this.getClass().getName());
+    }
+
+    @AfterClass
+    public void tearDown() {
+
+        System.out.println("Completed Test " + this.getClass().getName());
+        System.out.println("--------------------------------------------------------------");
+    }
 
     @Test
     public void testStack() {
