@@ -12,14 +12,14 @@ public class Singleton implements Serializable, Cloneable {
 
     protected Object readResolve() {
 
-        System.out.println("Trying to serialize Singleton. Returning singleton instance");
+        System.out.println("Serializing Singleton. Returning singleton instance");
         return singleton;
     }
 
     @Override
     public Object clone() throws CloneNotSupportedException {
 
-        System.out.println("Trying to clone Singleton. Returning singleton instance");
+        System.out.println("Cloning Singleton. Returning singleton instance");
         return singleton;
     }
 

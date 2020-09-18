@@ -1,6 +1,7 @@
 package com.test;
 
 import com.example.Stack;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -9,16 +10,12 @@ public class StackTest {
 
     @BeforeClass
     public void setUp() {
-
-        System.out.println("--------------------------------------------------------------");
-        System.out.println("Starting Test " + this.getClass().getName());
+        TestUtils.setUpMessage(this.getClass());
     }
 
     @AfterClass
     public void tearDown() {
-
-        System.out.println("Completed Test " + this.getClass().getName());
-        System.out.println("--------------------------------------------------------------");
+        TestUtils.tearDownMessage(this.getClass());
     }
 
     @Test
@@ -32,46 +29,66 @@ public class StackTest {
         stack.push(3);
 
         System.out.println();
-        stack.search(2);
-        stack.peek();
-        stack.pop();
+        Assert.assertTrue(!stack.isEmpty(), "stack should not be empty");
+        Assert.assertTrue(stack.search(1) > -1, "1 should be present on stack");
+        Assert.assertTrue(stack.search(2) > -1, "2 should be present on stack");
+        Assert.assertTrue(stack.search(3) > -1, "3 should be present on stack");
 
         System.out.println();
-        stack.search(3);
-        stack.peek();
-        stack.pop();
+        Assert.assertEquals(stack.peek().getData(), 3, "3 should be top");
+        Assert.assertEquals(stack.pop().getData(), 3, "3 should be popped");
 
         System.out.println();
-        System.out.println("Stack Empty " + stack.isEmpty());
-        stack.search(1);
-        stack.peek();
-        stack.pop();
+        Assert.assertTrue(!stack.isEmpty(), "stack should not be empty");
+        Assert.assertTrue(stack.search(3) == -1, "3 should not be present on stack");
 
         System.out.println();
-        System.out.println("Stack Empty " + stack.isEmpty());
-        stack.search(1);
-        stack.peek();
-        stack.pop();
+        Assert.assertEquals(stack.peek().getData(), 2, "2 should be top");
+        Assert.assertEquals(stack.pop().getData(), 2, "2 should be popped");
+
+        System.out.println();
+        Assert.assertTrue(!stack.isEmpty(), "stack should not be empty");
+        Assert.assertTrue(stack.search(2) == -1, "2 should not be present on stack");
+
+        System.out.println();
+        Assert.assertEquals(stack.peek().getData(), 1, "1 should be top");
+        Assert.assertEquals(stack.pop().getData(), 1, "1 should be popped");
+
+        System.out.println();
+        Assert.assertTrue(stack.isEmpty(), "stack should be empty");
+        Assert.assertTrue(stack.search(1) == -1, "1 should not be present on stack");
+
+        System.out.println();
+        Assert.assertEquals(stack.peek(), null, "null should be top as stack is empty");
+        Assert.assertEquals(stack.pop(), null, "null should be popped as stack is empty");
 
         System.out.println();
         stack.push(4);
         stack.push(5);
 
         System.out.println();
-        stack.search(5);
-        stack.peek();
-        stack.pop();
+        Assert.assertTrue(!stack.isEmpty(), "stack should not be empty");
+        Assert.assertTrue(stack.search(4) > -1, "4 should be present on stack");
+        Assert.assertTrue(stack.search(5) > -1, "5 should be present on stack");
 
         System.out.println();
-        System.out.println("Stack Empty " + stack.isEmpty());
-        stack.search(4);
-        stack.peek();
-        stack.pop();
+        Assert.assertEquals(stack.peek().getData(), 5, "5 should be top");
+        Assert.assertEquals(stack.pop().getData(), 5, "5 should be popped");
 
         System.out.println();
-        System.out.println("Stack Empty " + stack.isEmpty());
-        stack.search(4);
-        stack.peek();
-        stack.pop();
+        Assert.assertTrue(!stack.isEmpty(), "stack should not be empty");
+        Assert.assertTrue(stack.search(5) == -1, "5 should not be present on stack");
+
+        System.out.println();
+        Assert.assertEquals(stack.peek().getData(), 4, "4 should be top");
+        Assert.assertEquals(stack.pop().getData(), 4, "4 should be popped");
+
+        System.out.println();
+        Assert.assertTrue(stack.isEmpty(), "stack should be empty");
+        Assert.assertTrue(stack.search(4) == -1, "4 should not be present on stack");
+
+        System.out.println();
+        Assert.assertEquals(stack.peek(), null, "null should be top as stack is empty");
+        Assert.assertEquals(stack.pop(), null, "null should be popped as stack is empty");
     }
 }

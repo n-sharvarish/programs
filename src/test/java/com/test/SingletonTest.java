@@ -14,16 +14,12 @@ public class SingletonTest {
 
     @BeforeClass
     public void setUp() {
-
-        System.out.println("--------------------------------------------------------------");
-        System.out.println("Starting Test " + this.getClass().getName());
+        TestUtils.setUpMessage(this.getClass());
     }
 
     @AfterClass
     public void tearDown() {
-
-        System.out.println("Completed Test " + this.getClass().getName());
-        System.out.println("--------------------------------------------------------------");
+        TestUtils.tearDownMessage(this.getClass());
     }
 
     @Test
@@ -55,11 +51,11 @@ public class SingletonTest {
         Singleton singleton2 = null;
 
         try {
-            ObjectOutput out = new ObjectOutputStream(new FileOutputStream("src/main/resources/singleton.txt"));
+            ObjectOutput out = new ObjectOutputStream(new FileOutputStream("src/test/resources/singleton.txt"));
             out.writeObject(singleton1);
             out.close();
 
-            ObjectInput in = new ObjectInputStream(new FileInputStream("src/main/resources/singleton.txt"));
+            ObjectInput in = new ObjectInputStream(new FileInputStream("src/test/resources/singleton.txt"));
             singleton2 = (Singleton) in.readObject();
             in.close();
         } catch (Exception e) {
