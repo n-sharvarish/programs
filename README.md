@@ -157,3 +157,6 @@ com.mongodb
     
 - Drop Database
     - db.dropDatabase()
+    
+- Run Mongo Connector Test Cases
+

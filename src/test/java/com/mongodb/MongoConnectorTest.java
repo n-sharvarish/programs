@@ -24,7 +24,7 @@ public class MongoConnectorTest {
         TestUtils.tearDownMessage(this.getClass());
     }
 
-    @Test
+    //@Test
     public void testMongoConnector() {
 
         MongoProperties mongoProperties = new MongoProperties();
@@ -40,57 +40,57 @@ public class MongoConnectorTest {
         MongoConnector mongoConnector = new MongoConnector(mongoProperties);
         mongoConnector.connect();
 
-        System.out.println("Listing Databases");
+        System.out.println();
         mongoConnector.listDatabaseNames();
 
-        System.out.println("Creating Collection");
+        System.out.println();
         mongoConnector.createCollection();
 
-        System.out.println("Listing Databases");
+        System.out.println();
         mongoConnector.listDatabaseNames();
 
-        System.out.println("Listing Collections");
+        System.out.println();
         mongoConnector.listCollectionNames();
 
-        System.out.println("Listing Collection");
+        System.out.println();
         MongoCollection<Document> collection = mongoConnector.getCollection();
 
-        System.out.println("Creating Document");
+        System.out.println();
         Document document = new Document("name", "Scott Tiger").append("id", 1);
         mongoConnector.createDocument(collection, document);
 
-        System.out.println("Listing All Documents");
+        System.out.println();
         mongoConnector.getAllDocuments(collection);
 
-        System.out.println("Creating Documents");
+        System.out.println();
         List<Document> documents = Arrays.asList(new Document("name", "Scott Tigress").append("id", 2), new Document("name", "Scott Tiger Cub").append("id", 3));
         mongoConnector.createManyDocument(collection, documents);
 
-        System.out.println("Listing All Documents");
+        System.out.println();
         mongoConnector.getAllDocuments(collection);
 
-        System.out.println("Updating Document");
+        System.out.println();
         mongoConnector.updateDocument(collection, Filters.eq("id", 3), Updates.set("name", "Scott Tiger Cubs and Bulbuls"));
 
-        System.out.println("Listing Updated Document");
+        System.out.println();
         mongoConnector.getDocument(collection, Filters.eq("id", 3));
 
-        System.out.println("Deleting Updated Document");
+        System.out.println();
         mongoConnector.deleteDocument(collection, Filters.eq("id", 3));
 
-        System.out.println("Listing All Documents");
+        System.out.println();
         mongoConnector.getAllDocuments(collection);
 
-        System.out.println("Listing Collections");
+        System.out.println();
         mongoConnector.listCollectionNames();
 
-        System.out.println("Dropping Collection");
+        System.out.println();
         mongoConnector.dropCollection(collection);
 
-        System.out.println("Dropping Database");
+        System.out.println();
         mongoConnector.dropDatabase();
 
-        System.out.println("Disconnecting the database");
+        System.out.println();
         mongoConnector.disconnect();
     }
 }
