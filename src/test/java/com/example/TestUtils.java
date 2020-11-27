@@ -1,4 +1,4 @@
-package com.test;
+package com.example;
 
 public class TestUtils {
 

@@ -1,7 +1,5 @@
-package com.test;
+package com.example;
 
-import com.example.Singleton;
-import com.example.SingletonEnum;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;

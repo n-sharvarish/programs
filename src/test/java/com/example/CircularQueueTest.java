@@ -1,12 +1,11 @@
-package com.test;
+package com.example;
 
-import com.example.Queue;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class QueueTest {
+public class CircularQueueTest {
 
     @BeforeClass
     public void setUp() {
@@ -21,7 +20,7 @@ public class QueueTest {
     @Test
     public void testQueue() {
 
-        Queue queue = new Queue();
+        CircularQueue queue = new CircularQueue();
 
         System.out.println();
         queue.enqueue(1);
