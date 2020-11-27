@@ -20,6 +20,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <!-- Dependency -->
+        <com.fasterxml.jackson.core.version>2.10.0.pr3</com.fasterxml.jackson.core.version>
+        <org.apache.kafka.version>2.6.0</org.apache.kafka.version>
         <org.testng.version>6.14.3</org.testng.version>
     </properties>
 
@@ -44,6 +46,31 @@
     </build>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${com.fasterxml.jackson.core.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${com.fasterxml.jackson.core.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${com.fasterxml.jackson.core.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>${org.apache.kafka.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
