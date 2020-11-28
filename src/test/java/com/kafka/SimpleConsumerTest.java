@@ -1,23 +1,11 @@
 package com.kafka;
 
-import com.example.TestUtils;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import com.example.BaseTest;
 import org.testng.annotations.Test;
 
 import java.util.Properties;
 
-public class SimpleConsumerTest {
-
-    @BeforeClass
-    public void setUp() {
-        TestUtils.setUpMessage(this.getClass());
-    }
-
-    @AfterClass
-    public void tearDown() {
-        TestUtils.tearDownMessage(this.getClass());
-    }
+public class SimpleConsumerTest extends BaseTest {
 
     //@Test(timeOut = 10000, expectedExceptions = {Exception.class})
     public void testKafkaConsumer() {

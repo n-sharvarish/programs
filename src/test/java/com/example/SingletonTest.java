@@ -1,24 +1,12 @@
 package com.example;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.io.*;
 import java.lang.reflect.Constructor;
 
-public class SingletonTest {
-
-    @BeforeClass
-    public void setUp() {
-        TestUtils.setUpMessage(this.getClass());
-    }
-
-    @AfterClass
-    public void tearDown() {
-        TestUtils.tearDownMessage(this.getClass());
-    }
+public class SingletonTest extends BaseTest {
 
     @Test
     public void testSingleton() {

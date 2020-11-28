@@ -1,25 +1,13 @@
 package com.kafka;
 
-import com.example.TestUtils;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import com.example.BaseTest;
 import org.testng.annotations.Test;
 
 import java.util.Properties;
 
-public class SimpleProducerTest {
+public class SimpleProducerTest extends BaseTest {
 
-    @BeforeClass
-    public void setUp() {
-        TestUtils.setUpMessage(this.getClass());
-    }
-
-    @AfterClass
-    public void tearDown() {
-        TestUtils.tearDownMessage(this.getClass());
-    }
-
-    //@Test(timeOut = 10000)
+    //@Test
     public void testKafkaProducer() {
 
         Properties properties = new Properties();

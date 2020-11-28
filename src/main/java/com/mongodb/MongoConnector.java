@@ -25,8 +25,8 @@ public class MongoConnector {
 
         this.mongo = new MongoClient(this.mongoProperties.getHost(), this.mongoProperties.getPort());
 
-//        MongoCredential credential = MongoCredential.createCredential(this.mongoProperties.getUserName(),
-//                this.mongoProperties.getDatabaseName(), this.mongoProperties.getPassword().toCharArray());
+        //MongoCredential credential = MongoCredential.createCredential(this.mongoProperties.getUserName(),
+        //        this.mongoProperties.getDatabaseName(), this.mongoProperties.getPassword().toCharArray());
         System.out.println("Connected to the database successfully");
 
         this.database = this.mongo.getDatabase(this.mongoProperties.getDatabaseName());

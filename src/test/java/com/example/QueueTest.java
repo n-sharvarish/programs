@@ -1,21 +1,9 @@
 package com.example;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class QueueTest {
-
-    @BeforeClass
-    public void setUp() {
-        TestUtils.setUpMessage(this.getClass());
-    }
-
-    @AfterClass
-    public void tearDown() {
-        TestUtils.tearDownMessage(this.getClass());
-    }
+public class QueueTest extends BaseTest {
 
     @Test
     public void testQueue() {

@@ -1,28 +1,16 @@
 package com.mongodb;
 
-import com.example.TestUtils;
+import com.example.BaseTest;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Updates;
 import org.bson.Document;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class MongoConnectorTest {
-
-    @BeforeClass
-    public void setUp() {
-        TestUtils.setUpMessage(this.getClass());
-    }
-
-    @AfterClass
-    public void tearDown() {
-        TestUtils.tearDownMessage(this.getClass());
-    }
+public class MongoConnectorTest extends BaseTest {
 
     //@Test
     public void testMongoConnector() {
