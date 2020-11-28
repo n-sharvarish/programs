@@ -2,6 +2,13 @@
 
 com.example
 
+This package contains Java programs for
+- Balanced Brackets
+- Circular Queue
+- Queue
+- Singleton Design Pattern
+- Stack
+
 com.kafka
 
 - Install the latest Apache Zookeeper and Apache Kafka
