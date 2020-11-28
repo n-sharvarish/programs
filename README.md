@@ -1,6 +1,6 @@
 # programs
 
-com.example
+**com.example**
 
 This package contains Java programs for
 - Balanced Brackets
@@ -9,7 +9,7 @@ This package contains Java programs for
 - Singleton Design Pattern
 - Stack
 
-com.kafka
+**com.kafka**
 
 - Install the latest Apache Zookeeper and Apache Kafka
 
@@ -33,7 +33,7 @@ com.kafka
     
 - Run Simple Consumer and Simple Producer Test Cases
 
-com.mongodb
+**com.mongodb**
 
 - Install the latest Mongo DB
 
@@ -167,7 +167,7 @@ com.mongodb
     
 - Run Mongo Connector Test Cases
 
-com.mysql
+**com.mysql**
 
 - Install MySQL Server with MySQL Shell and MySQL Workbench
     - Configure MySQL Server
