@@ -329,3 +329,6 @@ com.mysql
 
 - Drop Database
     - `DROP DATABASE mydb;`
+    
+- Run MySQL Connector Test Cases
+
