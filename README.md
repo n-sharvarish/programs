@@ -332,3 +332,30 @@ This package contains Java programs for
     
 - Run MySQL Connector Test Cases
 
+**com.postgresql**
+
+- Download PostgreSQL zip
+
+- cd postgresql
+
+- Initialize Database
+  - `bin\initdb -D mydb -U mydbUser -W -E UTF8 -A scram-sha-256`
+  
+- Start Server
+  - `bin\pg_ctl -D mydb start -l logfile`
+  
+- Create Database
+  - `bin\createdb -U mydbUser -W mydb`
+
+- Login Database
+  - `bin\psql -U mydbUser -d mydb`
+  
+- Create Database from psql console
+  - `CREATE DATABASE test_db;`
+  
+- Drop Database
+  - `DROP DATABASE TEST_DB;`
+  - `dropdb -U mydbUser test_db`
+  
+- Stop Server
+  - `bin\pg_ctl -D mydb stop`
