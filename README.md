@@ -359,3 +359,31 @@ This package contains Java programs for
   
 - Stop Server
   - `bin\pg_ctl -D mydb stop`
+
+Express JS:
+
+- Install Node Modules
+  - `npm install`
+  
+- Run Independent Express JS Server
+  - `node src\main\webapp\express\app.js`
+  
+- Check Express JS Server with below URLs
+  - `GET http://localhost:3000`
+  - `POST http://localhost:3000`
+  - `GET http://localhost:3000/hello`
+  - `POST http://localhost:3000/hello`
+  - `GET http://localhost:3000/hello/myname`
+  - `GET http://localhost:3000/routes`
+  - `POST http://localhost:3000/routes`
+  
+- Using Express Generator
+  - `node_modules\.bin\express express-app`
+  
+- cd express-app
+
+- Install Node Modules
+  - `npm install`
+  
+- Start Express JS App
+  - `set DEBUG=expressapp:* & npm start`

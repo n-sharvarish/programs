@@ -1,0 +1,19 @@
+{
+  "name": "web-app",
+  "version": "1.0.0",
+  "description": "Node JS App",
+  "keywords": [],
+  "homepage": "",
+  "main": "index.js",
+  "bugs": {
+    "url": "",
+    "email": ""
+  },
+  "license": "UNLICENSED",
+  "contributors": [],
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-generator": "^4.16.1",
+    "morgan": "^1.10.0"
+  }
+}
