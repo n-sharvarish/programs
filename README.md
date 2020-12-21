@@ -173,8 +173,8 @@ This package contains Java programs for
     - Configure MySQL Server
 
 - Add below environment variables
-    - MYSQL_HOME: C:\Program Files\MySQL\MySQL Server 8.0
-    - PATH: %MYSQL_HOME%\bin
+    - `MYSQL_HOME: C:\Program Files\MySQL\MySQL Server 8.0`
+    - `PATH: %MYSQL_HOME%\bin`
     
 - Connect to MySQL DB 
     - `mysql -u root -ppassword -h localhost`
@@ -387,3 +387,7 @@ Express JS:
   
 - Start Express JS App
   - `set DEBUG=expressapp:* & npm start`
+
+- Check Express JS Server
+  - `GET http://localhost:3000`
+  
