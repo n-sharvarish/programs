@@ -11,6 +11,10 @@
   },
   "license": "UNLICENSED",
   "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "dependencies": {
     "express": "^4.17.1",
     "express-generator": "^4.16.1",
