@@ -376,7 +376,9 @@ Express JS:
   - `GET http://localhost:3000/hello/myname`
   - `GET http://localhost:3000/routes`
   - `POST http://localhost:3000/routes`
-  
+
+- Stop Server
+
 - Using Express Generator
   - `node_modules\.bin\express express-app`
   
